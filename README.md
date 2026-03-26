@@ -115,6 +115,8 @@ The project requires the following variables defined in your `.env` file to esta
 | `DB_NAME` | Name of the PostgreSQL database | `nest-teslo-db` |
 | `DB_USER` | Database administrative user | `postgres` |
 | `DB_PASSWORD` | Password for the DB user | `your password` |
+| `DB_HOST` | Hostname or IP address of the database | `localhost` |
+| `DB_PORT` | Port number of the database | `5432` |
 
 > [!IMPORTANT]
 > Make sure to create your `.env` file from the `.env.template` before starting the Docker containers to ensure the database is initialized with the correct credentials.

@@ -83,18 +83,20 @@ cp .env.example .env
 
 Modify the `.env` file with your desired database credentials.
 
-5. **Install Nest CLI:**
-
-```bash
-npm install -g @nestjs/cli
-```
-
-6. **Start local infrastructure using Docker**
+5. **Start local infrastructure using Docker**
 
 Lift the PostgreSQL database container:
 
 ```bash
 docker compose up -d
+```
+
+6. **Install Nest CLI (Optional):**
+
+Useful for generating resources and building the app:
+
+```bash
+npm install -g @nestjs/cli
 ```
 
 7. **Run the development server:**
@@ -119,7 +121,7 @@ The project requires the following variables defined in your `.env` file to esta
 | `DB_PORT` | Port number of the database | `5432` |
 
 > [!IMPORTANT]
-> Make sure to create your `.env` file from the `.env.template` before starting the Docker containers to ensure the database is initialized with the correct credentials.
+> Make sure to create your `.env` file from the `.env.example` before starting the Docker containers to ensure the database is initialized with the correct credentials.
 
 ## Available Scripts
 

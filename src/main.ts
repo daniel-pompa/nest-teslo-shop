@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
+import { GlobalExceptionsFilter } from './common/filters/exceptions.filter';
 
 const logger = new Logger('Bootstrap');
 
@@ -19,6 +20,8 @@ async function bootstrap() {
       },
     }),
   );
+
+  app.useGlobalFilters(new GlobalExceptionsFilter());
 
   const port = process.env.PORT ?? 3000;
   await app.listen(port);
